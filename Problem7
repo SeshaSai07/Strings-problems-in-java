@@ -1,0 +1,34 @@
+Question:
+You are given a string s. You need to find if the string is a panagram or not.
+
+Note: A panagram contains all the letters of english alphabet at least once.
+
+Examples:
+
+Input: s = "Thequickbrownfoxjumpsoverthelazydog"
+Output: True
+Input: s = "HeavyDuty"
+Output: False
+
+Solution:
+class Solution {
+
+    public static boolean isPanagram(String str) {
+        // Your code here
+        str = str.toLowerCase();
+        boolean[] present = new boolean[26];
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+                if (ch >= 'a' && ch <= 'z') {
+                    present[ch - 'a'] = true;
+           }
+        }
+        for (boolean flag : present)
+        {
+            if (!flag){
+                return false;
+            }
+        }
+        return true;
+    }
+}
