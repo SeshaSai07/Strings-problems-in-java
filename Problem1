@@ -1,0 +1,19 @@
+Question:
+You are given a string s. You need to find the length of the string and return it.
+
+Examples:
+
+Input: s = Geeks
+Output: 5
+Input: s = Hello1234
+Output: 9
+
+Solution:
+class Solution {
+    // Complete the function
+    // str: input string
+    public static int lengthString(String str) {
+        // find the length of string
+        return str.length();
+    }
+}
